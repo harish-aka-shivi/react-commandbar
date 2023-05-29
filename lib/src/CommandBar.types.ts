@@ -1,5 +1,3 @@
-import { MutableRefObject } from 'react';
-
 import { KEYWORDS_KEY_NAME, TITLE_KEY_NAME } from './CommandBar.constants';
 
 export type SetVisibleType = (nextValue: boolean | ((prevValue: boolean) => boolean), viewId?: string) => void;
