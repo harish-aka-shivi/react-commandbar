@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 // import { useHotkeysContext } from 'react-hotkeys-hook'
 // import { useUpdateEffect } from 'react-use'
-import { DEFAULT_VIEW_ID } from '../CommandBar.constants';
+import { ROOT_VIEW } from '../CommandBar.constants';
 // import { useCmdKHotkey, useEscapeHotkey } from '../CommandBar.hotkeys';
 import {
   _idCommandsMapVar,
@@ -30,10 +30,10 @@ export const useKeepDefaultCommandsUpdated = () => {
   const commandsMap = useReactiveVar(_idCommandsMapVar);
   useEffect(() => {
     const currentIdViewsMap = _idViewsMapVar();
-    const defaultView = currentIdViewsMap[DEFAULT_VIEW_ID];
+    const defaultView = currentIdViewsMap[ROOT_VIEW.id];
     _idViewsMapVar({
       ...currentIdViewsMap,
-      [DEFAULT_VIEW_ID]: {
+      [ROOT_VIEW.id]: {
         ...defaultView,
         commands: Object.values(commandsMap),
       },
@@ -88,7 +88,7 @@ export const useCommandBarSetup = () => {
   useUpdateEffect(() => {
     if (!visible) {
       // setVisibleCommands(scopedCommands)
-      selectedViewIdVar(DEFAULT_VIEW_ID);
+      selectedViewIdVar(ROOT_VIEW.id);
 
       /*
         reset shared state

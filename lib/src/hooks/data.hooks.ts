@@ -2,7 +2,7 @@
 import Fuse from 'fuse.js';
 import { useMemo } from 'react';
 
-import { DEFAULT_COMMAND_GROUP, DEFAULT_VIEW_ID, FUSE_SEARCH_OPTIONS } from '../CommandBar.constants';
+import { DEFAULT_COMMAND_GROUP, FUSE_SEARCH_OPTIONS, ROOT_VIEW } from '../CommandBar.constants';
 import { getSelectedView, isScopeInScopes } from '../CommandBar.helpers';
 import { CommandBarItemType } from '../CommandBar.types';
 import { allViewsVar, selectedViewIdVar } from '../CommandBar.vars';
@@ -26,7 +26,7 @@ export const useCommandsData = () => {
 
   const visibleCommands = useMemo(() => {
     //FIXME: Commands should be part of view
-    if (selectedView.id === DEFAULT_VIEW_ID) {
+    if (selectedView.id === ROOT_VIEW.id) {
       return scopedCommands;
     }
 

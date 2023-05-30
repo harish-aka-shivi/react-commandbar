@@ -1,5 +1,3 @@
-import { nanoid } from 'nanoid';
-
 import { ViewType } from './CommandBar.types';
 
 // export const COMMAND_BAR_MODAL_WIDTH = '560px';
@@ -20,12 +18,9 @@ export const FUSE_SEARCH_OPTIONS = {
 
 export const DEFAULT_COMMAND_GROUP = 'general';
 
-export const DEFAULT_VIEW_ID = nanoid();
-export const DEFAULT_VIEW_NAME = 'Root';
-export const DEFAULT_VIEW: ViewType = {
-  id: DEFAULT_VIEW_ID,
+export const ROOT_VIEW: ViewType = {
+  id: 'ROOT_ID',
   //FIXME: should we enable the group and scope in the commands of view?
   commands: [],
-  // placeholder: 'Search',
-  name: DEFAULT_VIEW_NAME,
+  name: 'Root View',
 };

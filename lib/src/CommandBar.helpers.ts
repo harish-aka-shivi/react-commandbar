@@ -1,4 +1,4 @@
-import { DEFAULT_VIEW } from './CommandBar.constants';
+import { ROOT_VIEW } from './CommandBar.constants';
 import { ViewType } from './CommandBar.types';
 
 /*
@@ -9,5 +9,5 @@ export const isScopeInScopes = (scope: string, scopes: string[]) => {
 };
 
 export const getSelectedView = (allViews: ViewType[], selectedViewId: string) => {
-  return allViews.find((_view) => _view.id === selectedViewId) ?? DEFAULT_VIEW;
+  return allViews.find((_view) => _view.id === selectedViewId) ?? ROOT_VIEW;
 };

@@ -1,6 +1,6 @@
 import { MutableRefObject } from 'react';
 
-import { DEFAULT_VIEW, DEFAULT_VIEW_ID } from './CommandBar.constants';
+import { ROOT_VIEW } from './CommandBar.constants';
 import { CommandBarItemType, SharedDataType, ViewType } from './CommandBar.types';
 import { makeVar } from './utils/reactiveVar';
 
@@ -23,9 +23,9 @@ export const _idCommandsMapVar = makeVar({} as Record<string, CommandBarItemType
   to-be used internally
   Map of views versus viewId used to track views registered using useView and command.subViews
 */
-export const _idViewsMapVar = makeVar({ [DEFAULT_VIEW_ID]: DEFAULT_VIEW } as Record<string, ViewType>);
+export const _idViewsMapVar = makeVar({ [ROOT_VIEW.id]: ROOT_VIEW } as Record<string, ViewType>);
 
-export const selectedViewIdVar = makeVar(DEFAULT_VIEW_ID);
+export const selectedViewIdVar = makeVar(ROOT_VIEW.id);
 
 /*
   All the views represented as an array

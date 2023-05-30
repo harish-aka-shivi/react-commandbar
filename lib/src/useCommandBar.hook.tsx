@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef } from 'react';
 
-import { DEFAULT_VIEW_ID } from './CommandBar.constants';
+import { ROOT_VIEW } from './CommandBar.constants';
 import { CommandBarItemType, UseCommandBarType, ViewConfigurationType } from './CommandBar.types';
 import { commandBarSearchValueVar, commandBarVisibilityVar, setCommandBarVisibilityVar } from './CommandBar.vars';
 import { useCommandsData, useSelectedView } from './hooks/data.hooks';
@@ -60,7 +60,7 @@ const useCommandBar = ({ visible, setVisible, searchBar, item, group }: UseComma
   // const selectedSearchBar =  useMemo(() => {selectedView.id === DEFAULT_VIEW_ID ? searchBar : selectedView.searchBar };
 
   const selected: ViewConfigurationType = useMemo(() => {
-    const isDefaultViewSelected = selectedView.id === DEFAULT_VIEW_ID;
+    const isDefaultViewSelected = selectedView.id === ROOT_VIEW.id;
 
     let selectedSearchBar = searchBar;
     let selectedItem = item;

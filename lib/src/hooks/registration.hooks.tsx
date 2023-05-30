@@ -1,5 +1,6 @@
 import { DependencyList, MutableRefObject, useEffect, useRef } from 'react';
 
+import { ROOT_VIEW } from '../CommandBar.constants';
 import { CommandBarItemType, ViewType } from '../CommandBar.types';
 import { _idCommandsMapVar, _idViewsMapVar } from '../CommandBar.vars';
 
@@ -15,11 +16,15 @@ export const useView = (view: ViewType[] | ViewType, dependencies?: DependencyLi
       Getting value from reactive var, won't rerender
     */
     viewCurrent.forEach((view) => {
-      const idViewsCurrentMap = _idViewsMapVar();
-      _idViewsMapVar({
-        ...idViewsCurrentMap,
-        [view.id]: view,
-      });
+      if (view.id !== ROOT_VIEW.id) {
+        const idViewsCurrentMap = _idViewsMapVar();
+        _idViewsMapVar({
+          ...idViewsCurrentMap,
+          [view.id]: view,
+        });
+      } else {
+        console.warn('Unable to register view because the view id is equals to root view id', 'color: yellow;');
+      }
     });
 
     return () => {

@@ -9,7 +9,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts"
+    "prepublishOnly": "cp ../README.md . && cp ../LICENSE . && yarn build",
+    "postpublish": "rm README.md && rm LICENSE",
+    "build": "tsup src/index.ts",
+    "dev": "tsup src --watch",
+    "publish": "np"
   },
   "dependencies": {
     "fuse.js": "^6.6.2",
@@ -31,7 +35,9 @@
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^8.0.0",
+    "np": "^8.0.2",
     "prettier": "^2.3.1",
+    "tsup": "^6.7.0",
     "typescript": "^4.9.3"
   }
 }
