@@ -34,11 +34,6 @@ const useCommandBar = ({ visible, setVisible, searchBar, item, group }: UseComma
 
   const { visibleCommandsGrouped } = useCommandsData();
 
-  // const [inputValueInternal, setInternalInputValue] = useControllableState({
-  //   prop: selectedView.id === DEFAULT_VIEW_ID ? inputValue : selectedView.inputValue,
-  //   onChange: selectedView.onInputValueChange,
-  // });
-
   /*
   Setup the command bar, initialize data, scopes and hotkeys
   */

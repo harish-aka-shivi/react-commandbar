@@ -21,7 +21,7 @@ jobs:
         with:
           node-version-file: ".nvmrc"
 
-      - run: yarn install --frozen-lockfile
+      - run: yarn install
       - name: Create pull request or publish
         id: changesets
         uses: changesets/action@v1
