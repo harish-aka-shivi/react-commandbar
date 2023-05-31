@@ -1,0 +1,4 @@
+[lib/src/**.tsx]
+[.github/workflows/**.yml]
+indent_style = space
+indent_size = 2
