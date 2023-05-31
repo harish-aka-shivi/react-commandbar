@@ -1,7 +1,5 @@
 import { ViewType } from './CommandBar.types';
 
-// export const COMMAND_BAR_MODAL_WIDTH = '560px';
-
 export const COMMAND_BAR_SHORTCUTS_SCOPE = 'CMD_BAR';
 
 export const KEYWORDS_KEY_NAME = 'keywords';
