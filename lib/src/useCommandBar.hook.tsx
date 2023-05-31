@@ -46,7 +46,6 @@ const useCommandBar = ({ visible, setVisible, searchBar, item, group }: UseComma
 
   const visibilityRef = useRef(false);
   const searchBarRef = useRef<HTMLInputElement>(null);
-  // const itemRef = useRef<HTMLDivElement | null>(null);
   const listRef = useRef<HTMLDivElement | null>(null);
 
   // add listener to search bar ref to keep track of the input value
