@@ -1,6 +1,5 @@
 import { MutableRefObject, useEffect, useMemo, useRef } from 'react';
 
-// import { useDownHotkey, useEnterHotkey, useUpHotkey } from '../CommandBar.hotkeys';
 import { CommandBarItemType } from '../CommandBar.types';
 import {
   commandBarNavigationStateVar,
