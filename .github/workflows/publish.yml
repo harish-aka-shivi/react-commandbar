@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  LIB_DIR: client
+  LIB_DIR: lib
 
 jobs:
   publish:

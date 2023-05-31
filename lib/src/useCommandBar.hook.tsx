@@ -47,7 +47,8 @@ const useCommandBar = ({ visible, setVisible, searchBar, item, group }: UseComma
 
   useEffect(() => {
     if (visibilityRef.current) {
-      //
+      //TODO: remove
+      console.log('remove');
     }
   });
 
