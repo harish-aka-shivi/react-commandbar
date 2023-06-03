@@ -57,57 +57,6 @@ const useCommandBarKeyboardNavigation = () => {
     setFirstCommandBarItemActive();
   }, [search]);
 
-  // // scroll up and scrollDown and handled twice once with when focus on
-  // // search bar and once with focus on everywhere else, because useHotkeys
-  // // don't catch event when focus on input element
-  // const handleScrollUp = (event: KeyboardEvent) => {
-  //   const currentNavState = commandBarNavigationStateVar();
-  //   const cmdBarItemFocussed = currentNavState.activeIndex;
-
-  //   /*
-  //     Move the focus on previous command bar item
-  //   */
-  //   if (cmdBarItemFocussed > 0) {
-  //     stopPropagation(event);
-  //     decrementCommandBarActiveIndex();
-  //   } else {
-  //     /*
-  //       Scroll the root view
-  //     */
-  //     const rootElement = currentNavState.rootRef?.current;
-  //     if (rootElement) {
-  //       rootElement.scrollBy({ top: -100, behavior: 'smooth' });
-  //     }
-  //   }
-  // };
-
-  // const handleScrollDown = (event: KeyboardEvent) => {
-  //   const currentNavState = commandBarNavigationStateVar();
-  //   const cmdBarItemFocussed = currentNavState.activeIndex;
-
-  //   /*
-  //     Move the focus on next command bar item
-  //   */
-  //   if (cmdBarItemFocussed < visibleCommands.length - 1) {
-  //     stopPropagation(event);
-  //     incrementCommandBarActiveIndex();
-  //   } else {
-  //     /* scroll the root view */
-  //     const rootElement = currentNavState.rootRef?.current;
-  //     if (rootElement) {
-  //       rootElement.scrollBy({ top: 100, behavior: 'smooth' });
-  //     }
-  //   }
-  // };
-
-  // Listen to shortcuts in case search bar is not focussed and cmd bar is open
-  // Implements the same shortcuts as when search bar is focussed
-  // useDownHotkey(handleScrollDown, [visibleCommands, selectedViewId, visible]);
-
-  // useUpHotkey(handleScrollUp, [visibleCommands, selectedViewId]);
-
-  // useEnterHotkey(handleEnter, [visibleCommands, selectedViewId]);
-
   useEffect(() => {
     const handleEnter = (event: KeyboardEvent) => {
       const selectedIndex = commandBarNavigationStateVar().activeIndex;
