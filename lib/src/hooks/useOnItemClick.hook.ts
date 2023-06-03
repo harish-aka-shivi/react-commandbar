@@ -9,10 +9,8 @@ import {
   sharedDataVar,
 } from '../CommandBar.vars';
 import { useReactiveVar } from '../utils/reactiveVar';
-// import { useCommandBarState } from './useCommandBarState.hook';
 
 export const useOnItemClick = () => {
-  // const { setVisible } = useCommandBar();
   const allViews = useReactiveVar(allViewsVar);
   const selectedViewId = useReactiveVar(selectedViewIdVar);
 
@@ -42,7 +40,6 @@ export const useOnItemClick = () => {
       if (typeof result === 'boolean' && !result) {
         return;
       }
-      // setVisible(false);
       const setVisible = setCommandBarVisibilityVar();
       setVisible && setVisible(false);
 
