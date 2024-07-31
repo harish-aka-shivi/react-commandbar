@@ -26,6 +26,7 @@ export const useCommandsData = () => {
 
   const visibleCommands = useMemo(() => {
     //FIXME: Commands should be part of view
+    //
     if (selectedView.id === ROOT_VIEW.id) {
       return scopedCommands;
     }
