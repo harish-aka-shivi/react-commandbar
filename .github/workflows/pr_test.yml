@@ -3,12 +3,12 @@ name: Test PR
 on:
   pull_request:
     paths:
-      - "lib/**"
+      - "packages/lib/**"
     branches:
       - "**"
 
 env:
-  LIB_DIR: lib
+  LIB_DIR: packages/lib
 
 jobs:
   build:
