@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "turbo": "^2.0.14",
+    "@changesets/cli": "^2.26.1"
+  },
+  "dependencies": {
+  },
+  "packageManager": "yarn@1.22.19",
+  "private": "true",
+  "name": "command-bar-monorepo",
+  "version": "1.0.0",
+  "workspaces":[
+    "apps/*",
+    "packages/*"
+  ]
+}

@@ -5,14 +5,14 @@ on:
     branches:
       - main
     paths:
-      - 'lib/**'
+      - 'packages/lib/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 env:
-  LIB_DIR: lib
+  LIB_DIR: packages/lib
 
 jobs:
   publish:
@@ -37,4 +37,4 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
           publish: yarn run build && yarn changeset publish
-          cwd: "./lib"
+          cwd: "./packages/lib"

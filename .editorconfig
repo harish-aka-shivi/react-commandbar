@@ -1,4 +1,6 @@
 [lib/src/**.tsx]
 [.github/workflows/**.yml]
+[package.json]
+[turbo.json]
 indent_style = space
 indent_size = 2
