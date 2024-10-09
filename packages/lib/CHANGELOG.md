@@ -1,5 +1,12 @@
 # react-commandbar
 
+## 0.0.5
+
+### Patch Changes
+
+- Add dummy comment
+- Refactored the code
+
 ## 0.0.4
 
 ### Patch Changes
